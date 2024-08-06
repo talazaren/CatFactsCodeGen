@@ -61,9 +61,9 @@
 			children = (
 				1A6725992C62498C004B3730 /* CatsAPI */,
 				1A6725A22C624F3C004B3730 /* App */,
-				1A6725912C62489A004B3730 /* Preview Content */,
 				1A6725A12C624F2F004B3730 /* CatView */,
 				1A67258F2C62489A004B3730 /* Assets.xcassets */,
+				1A6725912C62489A004B3730 /* Preview Content */,
 			);
 			path = CatFactsCodeGen;
 			sourceTree = "<group>";

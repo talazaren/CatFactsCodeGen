@@ -17,13 +17,20 @@ struct CatFactsView: View {
                 .font(.system(size: 28, weight: .bold))
                 .padding(.top, 150)
             
-            if let fact = cat.currentFact {
-                Text("\(fact.fact ?? "fact")")
-                    .font(.title2)
-                    .multilineTextAlignment(.center)
-                    .padding()
-            } else {
-                Text("error")
+            switch cat.isLoading {
+            case true:
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .padding(.top, 40)
+            case false:
+                if let fact = cat.currentFact {
+                    Text("\(fact.fact ?? "fact")")
+                        .font(.title2)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                } else {
+                    Text("error")
+                }
             }
             
             Spacer()
